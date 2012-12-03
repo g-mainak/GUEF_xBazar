@@ -1,0 +1,19 @@
+<%= provide(:title, 'GUEF') %>
+<h1>Sign up!</h1>
+
+<div class="row">
+  <div class="span5 offset4">
+    <%= form_for(@student) do |f| %>
+      <%= render 'shared/error_messages_student' %>
+
+	  <br>
+      <%= f.label :email %>
+      <%= f.text_field :email, value: "@yale.edu" %>
+
+      <%= f.label :year %>
+      <%= f.text_field :year, :value => "2016" %>
+		<br>
+      <%= f.submit "Sign me up!", :class => "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
